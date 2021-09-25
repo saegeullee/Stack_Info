@@ -5,13 +5,14 @@ import { AppService } from './app.service';
 import { CompanyModule } from './company/company.module';
 import { StackModule } from './stack/stack.module';
 import { CompanyField } from './company/company-field/company-field.entity';
+import { Company } from './company/company.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'db.sqlite',
-      entities: [CompanyField],
+      entities: [CompanyField, Company],
       synchronize: true,
     }),
     CompanyModule,

@@ -5,8 +5,9 @@ import { CompanyService } from './company.service';
 import { CompanyFieldController } from './company-field/company-field.controller';
 import { CompanyFieldService } from './company-field/company-field.service';
 import { CompanyField } from './company-field/company-field.entity';
+import { Company } from './company.entity';
 @Module({
-  imports: [TypeOrmModule.forFeature([CompanyField])],
+  imports: [TypeOrmModule.forFeature([CompanyField, Company])],
   controllers: [CompanyController, CompanyFieldController],
   providers: [CompanyService, CompanyFieldService],
 })
