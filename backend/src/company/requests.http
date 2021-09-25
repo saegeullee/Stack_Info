@@ -1,0 +1,15 @@
+### Create a new company field
+POST http://localhost:3000/company-field
+Content-Type: application/json
+
+{
+    "name": "Education"
+}
+
+
+### Find a specific company field
+GET http://localhost:3000/company-field/1
+
+
+### Find a company field list
+GET http://localhost:3000/company-field
